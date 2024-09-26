@@ -1,15 +1,25 @@
 {
-	"extends": "@repo/typescript-config/nextjs.json",
+	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"paths": {
-			"@/*": ["./src/*"]
-		}
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"isolatedModules": true,
+		"moduleResolution": "Bundler",
+		"preserveWatchOutput": true,
+		"skipLibCheck": true,
+		"strictNullChecks": true,
+		"plugins": [{ "name": "next" }],
+		"allowJs": true,
+		"incremental": true,
+		"jsx": "preserve",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "esnext",
+		"resolveJsonModule": true,
+		"strict": true,
+		"target": "es5"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+	"include": ["src", "next-env.d.ts"],
 	"exclude": ["node_modules"]
 }
